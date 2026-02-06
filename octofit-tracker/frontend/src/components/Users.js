@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`;
+const API_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`;
 
 function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const url = `${API_BASE_URL}/api/users/`;
-    console.log('Fetching users from:', url);
-    fetch(url)
+    console.log('Fetching users from:', API_URL);
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => {
         console.log('Users data:', data);

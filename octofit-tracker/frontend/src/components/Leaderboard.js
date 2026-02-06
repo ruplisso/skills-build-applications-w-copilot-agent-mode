@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`;
+const API_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`;
 
 function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    const url = `${API_BASE_URL}/api/leaderboard/`;
-    console.log('Fetching leaderboard from:', url);
-    fetch(url)
+    console.log('Fetching leaderboard from:', API_URL);
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => {
         console.log('Leaderboard data:', data);

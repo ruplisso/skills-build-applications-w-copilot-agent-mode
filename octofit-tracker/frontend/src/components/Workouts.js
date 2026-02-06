@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`;
+const API_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`;
 
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    const url = `${API_BASE_URL}/api/workouts/`;
-    console.log('Fetching workouts from:', url);
-    fetch(url)
+    console.log('Fetching workouts from:', API_URL);
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => {
         console.log('Workouts data:', data);
