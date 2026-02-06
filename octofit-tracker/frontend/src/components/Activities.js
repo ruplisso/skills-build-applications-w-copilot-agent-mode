@@ -19,28 +19,37 @@ function Activities() {
   }, []);
 
   return (
-    <div>
-      <h2>Activities</h2>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>User</th>
-            <th>Type</th>
-            <th>Duration (min)</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          {activities.map((activity, index) => (
-            <tr key={activity.id || index}>
-              <td>{activity.user}</td>
-              <td>{activity.type}</td>
-              <td>{activity.duration}</td>
-              <td>{activity.date}</td>
+    <div className="card shadow-sm">
+      <div className="card-header bg-primary text-white">
+        <h2 className="mb-0">Activities</h2>
+      </div>
+      <div className="card-body p-0">
+        <table className="table table-striped table-hover mb-0">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">User</th>
+              <th scope="col">Type</th>
+              <th scope="col">Duration (min)</th>
+              <th scope="col">Date</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {activities.map((activity, index) => (
+              <tr key={activity.id || index}>
+                <td>{index + 1}</td>
+                <td>{activity.user}</td>
+                <td><span className="badge bg-info text-dark">{activity.type}</span></td>
+                <td>{activity.duration}</td>
+                <td>{activity.date}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="card-footer text-muted">
+        Total activities: {activities.length}
+      </div>
     </div>
   );
 }

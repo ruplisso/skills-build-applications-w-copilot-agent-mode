@@ -19,26 +19,39 @@ function Workouts() {
   }, []);
 
   return (
-    <div>
-      <h2>Workouts</h2>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Difficulty</th>
-          </tr>
-        </thead>
-        <tbody>
-          {workouts.map((workout, index) => (
-            <tr key={workout.id || index}>
-              <td>{workout.name}</td>
-              <td>{workout.description}</td>
-              <td>{workout.difficulty}</td>
+    <div className="card shadow-sm">
+      <div className="card-header bg-danger text-white">
+        <h2 className="mb-0">Workouts</h2>
+      </div>
+      <div className="card-body p-0">
+        <table className="table table-striped table-hover mb-0">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Difficulty</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {workouts.map((workout, index) => (
+              <tr key={workout.id || index}>
+                <td>{index + 1}</td>
+                <td><strong>{workout.name}</strong></td>
+                <td>{workout.description}</td>
+                <td>
+                  <span className={`badge ${workout.difficulty === 'easy' ? 'bg-success' : workout.difficulty === 'medium' ? 'bg-warning text-dark' : 'bg-danger'}`}>
+                    {workout.difficulty}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="card-footer text-muted">
+        Total workouts: {workouts.length}
+      </div>
     </div>
   );
 }

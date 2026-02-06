@@ -19,26 +19,35 @@ function Users() {
   }, []);
 
   return (
-    <div>
-      <h2>Users</h2>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Team</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user, index) => (
-            <tr key={user.id || index}>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>{user.team}</td>
+    <div className="card shadow-sm">
+      <div className="card-header bg-warning text-dark">
+        <h2 className="mb-0">Users</h2>
+      </div>
+      <div className="card-body p-0">
+        <table className="table table-striped table-hover mb-0">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Team</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map((user, index) => (
+              <tr key={user.id || index}>
+                <td>{index + 1}</td>
+                <td><strong>{user.name}</strong></td>
+                <td><a href={`mailto:${user.email}`} className="link-primary">{user.email}</a></td>
+                <td><span className="badge bg-secondary">{user.team}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="card-footer text-muted">
+        Total users: {users.length}
+      </div>
     </div>
   );
 }
