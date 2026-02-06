@@ -1,0 +1,257 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #e0e0e0;
+}
+
+/* Navigation */
+.navbar {
+  background: linear-gradient(90deg, #0f3460, #533483) !important;
+  border-bottom: 3px solid #e94560;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #e94560 !important;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+.nav-link {
+  color: #a8d8ea !important;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link:hover {
+  color: #e94560 !important;
+  border-bottom: 2px solid #e94560;
+}
+
+/* Cards */
+.card {
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.2);
+  border: 1px solid rgba(233, 69, 96, 0.15);
+  border-radius: 0.75rem;
+  background-color: #16213e;
+  color: #e0e0e0;
+  overflow: hidden;
+}
+
+.card-header {
+  font-weight: 600;
+  font-size: 1.25rem;
+  border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+}
+
+.card-footer {
+  background-color: #1a1a2e;
+  color: #a8d8ea;
+  border-top: 1px solid rgba(168, 216, 234, 0.15);
+}
+
+/* Tables */
+.table {
+  color: #e0e0e0;
+}
+
+.table th {
+  background-color: #0f3460 !important;
+  color: #a8d8ea !important;
+  border-color: #533483 !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  border-color: rgba(83, 52, 131, 0.3) !important;
+  vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(15, 52, 96, 0.4) !important;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: rgba(22, 33, 62, 0.6) !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(233, 69, 96, 0.1) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #e94560;
+}
+
+.display-5 {
+  color: #e94560 !important;
+  font-weight: 700;
+}
+
+.lead {
+  color: #a8d8ea !important;
+}
+
+/* Links */
+a {
+  color: #a8d8ea;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #e94560;
+}
+
+.link-primary {
+  color: #a8d8ea !important;
+}
+
+.link-primary:hover {
+  color: #e94560 !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #0f3460, #533483);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #533483, #e94560);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(233, 69, 96, 0.4);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #1b998b, #2ecc71);
+  border: none;
+  font-weight: 600;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #2ecc71, #1b998b);
+  transform: translateY(-1px);
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #3498db, #a8d8ea);
+  border: none;
+  font-weight: 600;
+}
+
+.btn-info:hover {
+  background: linear-gradient(135deg, #a8d8ea, #3498db);
+  transform: translateY(-1px);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  border: none;
+  font-weight: 600;
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #e94560, #c0392b);
+  border: none;
+  font-weight: 600;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #c0392b, #e94560);
+  transform: translateY(-1px);
+}
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  font-size: 0.85em;
+}
+
+.badge.bg-info {
+  background-color: #3498db !important;
+}
+
+.badge.bg-secondary {
+  background-color: #533483 !important;
+}
+
+.badge.bg-warning {
+  background-color: #f39c12 !important;
+}
+
+.badge.bg-success {
+  background-color: #1b998b !important;
+}
+
+.badge.bg-danger {
+  background-color: #e94560 !important;
+}
+
+/* Welcome card */
+.welcome-card {
+  max-width: 650px;
+  margin: 3rem auto;
+  text-align: center;
+  background: linear-gradient(135deg, #16213e, #1a1a2e) !important;
+  border: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.welcome-card h1 {
+  color: #e94560;
+  font-weight: 700;
+}
+
+.welcome-card p {
+  color: #a8d8ea;
+  font-size: 1.1rem;
+}
+
+.welcome-card hr {
+  border-color: rgba(233, 69, 96, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #533483;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e94560;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
